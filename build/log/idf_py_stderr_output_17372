@@ -1,0 +1,106 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081110: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_realloc_base at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:404
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_realloc_base at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:404
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_realloc_base at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:404
+[0m
+[0;33m0x40084000: esp_flash_get_physical_size at C:/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:530
+[0m
+[0;33m0x40082000: heap_caps_realloc_base at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:404
+[0m
+[0;33m0x40084000: esp_flash_get_physical_size at C:/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:530
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40084000: esp_flash_get_physical_size at C:/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:530
+[0m
+[0;33m0x40086000: xQueueTakeMutexRecursive at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:783
+[0m
+[0;33m0x40084000: esp_flash_get_physical_size at C:/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:530
+[0m
+[0;33m0x40086000: xQueueTakeMutexRecursive at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:783
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40086000: xQueueTakeMutexRecursive at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:783
+[0m
+[0;33m0x40088000: vApplicationGetIdleTaskMemory at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/port_common.c:52 (discriminator 1)
+[0m
+[0;33m0x40086000: xQueueTakeMutexRecursive at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:783
+[0m
+[0;33m0x40088000: vApplicationGetIdleTaskMemory at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/port_common.c:52 (discriminator 1)
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40088000: vApplicationGetIdleTaskMemory at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/port_common.c:52 (discriminator 1)
+[0m
+[0;33m0x4008a000: mapping_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:387
+ (inlined by) tlsf_free at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1123
+[0m
+[0;33m0x40088000: vApplicationGetIdleTaskMemory at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/port_common.c:52 (discriminator 1)
+[0m
+[0;33m0x4008a000: mapping_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:387
+ (inlined by) tlsf_free at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1123
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x4008a000: mapping_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:387
+ (inlined by) tlsf_free at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1123
+[0m
+[0;33m0x4008c000: xthal_window_spill_nw at /Users/igrokhotkov/e/esp32/hal/hal/windowspill_asm.S:329
+[0m
+[0;33m0x4008a000: mapping_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_insert at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:387
+ (inlined by) tlsf_free at C:/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1123
+[0m
+[0;33m0x4008c000: xthal_window_spill_nw at /Users/igrokhotkov/e/esp32/hal/hal/windowspill_asm.S:329
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x4008c000: xthal_window_spill_nw at /Users/igrokhotkov/e/esp32/hal/hal/windowspill_asm.S:329
+[0m
+[0;33m0x4008c000: xthal_window_spill_nw at /Users/igrokhotkov/e/esp32/hal/hal/windowspill_asm.S:329
+[0m
+[0;33m0x40080000: _WindowOverflow4 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x400d6e70: esp_ipc_init at C:/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/esp_ipc.c:114
+[0m
+[0;33m0x400d0e5c: esp_init_app_elf_sha256 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/esp_app_format/esp_app_desc.c:69
+[0m
+[0;33m0x400d3cfc: __esp_system_init_fn_esp_timer_startup_init at C:/Espressif/frameworks/esp-idf-v5.1.1/components/esp_timer/src/esp_timer.c:575
+[0m
+[0;33m0x400e6170: __esp_system_init_fn_init_components0 at C:/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/startup.c:486
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;3
