@@ -2,11 +2,27 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include <mhz14a.h> 
+
+uart_config_t uartMHZ14a ={
+    .baud_rate = 9600,
+    .databits = UART_DATA_8_BITS,
+    .parity = UART_PARITY_DISABLE,
+    .stopbits = UART_STOP_BITS_1,
+    .flow_ctrl = UART_HW_FLOWCTRL_DISABLE,
+    .rx_flow_ctrl_thresh = 0, 
+    .source_clk = UART_SCLK_DEFAULT
+}
+
+uint32_t co2_ppm=0; 
+
 void app_main(void)
 {
-ESP_LOGW("LOG", "This is a warning");
-ESP_LOGI("LOG", "This is an info");
-ESP_LOGD("LOG", "This is a debug");
-ESP_LOGV("LOG", "This is a verbose");
-ESP_LOGE("LOG","This is an error");
+    mhz14a_initPWM(); // init PWM & Warming up mhz14a
+    mhz14a_initUART(&uartMHZ14a);
+    while(1){
+        mhz14a_getDataFromSensorViaUART(&co2_ppm);
+        ESP_LOGI("MHZ14A", "CO2: %d", co2_ppm);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
 }   
