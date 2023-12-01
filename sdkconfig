@@ -339,6 +339,25 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
+# MHZ14a configuration
+#
+CONFIG_MHZ14A_PWM_PIN=32
+CONFIG_QUEUE_SIZE=1
+CONFIG_HD_PIN=33
+# CONFIG_MHZ14A_PWM is not set
+CONFIG_MHZ14A_UART=y
+
+#
+# MHZ14a UART configuration
+#
+CONFIG_MHZ14A_PIN_TX=1
+CONFIG_MHZ14A_PIN_RX=3
+CONFIG_MHZ14A_UART_BAUD_RATE=9600
+CONFIG_MHZ14A_UART_PORT=0
+# end of MHZ14a UART configuration
+# end of MHZ14a configuration
+
+#
 # Sample configuration
 #
 CONFIG_PIN_NUM_SCL_GPIO=27

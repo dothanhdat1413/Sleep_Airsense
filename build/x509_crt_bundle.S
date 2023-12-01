@@ -1,4 +1,4 @@
-/* * Data converted from F:/ESP-IDF/IDF_project_template/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from K:/ESP-IDF/PROJECT/Sleep_Airsense/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

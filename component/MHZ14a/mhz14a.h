@@ -19,8 +19,10 @@
 #include "esp_log.h"
 #include "soc/rtc.h"
 #include "driver/gpio.h"
-#include "driver/mcpwm.h"
+#include "driver/mcpwm_prelude.h"
 #include "driver/uart.h"
+//#include "esp_timer.h"
+
 
 __attribute__((unused)) static const char *TAG = "MHZ14a";
 
@@ -56,7 +58,7 @@ enum {
 ////#elif (CONFIG_MHZ14A_UART)
 
 
-// Định nghĩa mã giao tiếp của hãng
+// UART data from datasheet, no need to change
 #define MHZ14A_TIME_FOR_CALIBRATION                         ((uint32_t)7000 / portTICK_RATE_MS)
 #define MHZ14A_UART_CMD_GET_CONCENTRATION                   0x86
 #define MHZ14A_UART_CMD_CALIBRATION_ZERO_POINT              0x87
@@ -69,7 +71,7 @@ enum {
 #define UART_DATA_RECIVE_START_CHARACTER_2                  0x86
 
 
-// Định nghĩa mã lỗi của mình
+// our error code definition 
 
 #define ID_MHZ14A  0x0E
 #define MHZ14A_UART_RX_BUFFER_SIZE 128UL
@@ -100,7 +102,7 @@ enum {
 
 esp_err_t mhz14a_initPWM();
 esp_err_t mhz14a_readDataViaPWM(uint32_t *co2_ppm);
-static SemaphoreHandle_t mhz14a_uartMuxtex = NULL;      //?? để làm gì
+static SemaphoreHandle_t mhz14a_uartMuxtex = NULL;      // for task schedule in main 
 
 extern esp_err_t mhz14a_initUART(uart_config_t *uart_config);
 

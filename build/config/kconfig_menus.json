@@ -4394,6 +4394,122 @@
             {
                 "children": [],
                 "depends_on": null,
+                "help": "GPIO number for PWM PIN.",
+                "id": "MHZ14A_PWM_PIN",
+                "name": "MHZ14A_PWM_PIN",
+                "range": null,
+                "title": "PMW PIN GPIO Number",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "Max size queue for store capture PWM.",
+                "id": "QUEUE_SIZE",
+                "name": "QUEUE_SIZE",
+                "range": null,
+                "title": "Max size queue",
+                "type": "int"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "GPIO number for HD PIN, using for zero-point calibration(auto calibartion).",
+                "id": "HD_PIN",
+                "name": "HD_PIN",
+                "range": null,
+                "title": "HD PIIN GPIO number",
+                "type": "int"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "<choice MHZ14A_PROTOCOL_COMMUNICATION>",
+                        "help": null,
+                        "id": "MHZ14A_PWM",
+                        "name": "MHZ14A_PWM",
+                        "range": null,
+                        "title": "PWM",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "<choice MHZ14A_PROTOCOL_COMMUNICATION>",
+                        "help": null,
+                        "id": "MHZ14A_UART",
+                        "name": "MHZ14A_UART",
+                        "range": null,
+                        "title": "UART",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "help": "MHZ14a protocol communication to get data.",
+                "id": "mhz14a-configuration-mhz14a-protocol",
+                "name": "MHZ14A_PROTOCOL_COMMUNICATION",
+                "title": "MHZ14a protocol",
+                "type": "choice"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": "MHZ14A_UART",
+                        "help": "GPIO number for TX.",
+                        "id": "MHZ14A_PIN_TX",
+                        "name": "MHZ14A_PIN_TX",
+                        "range": null,
+                        "title": "TX GPIO Number",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "MHZ14A_UART",
+                        "help": "GPIO number for RX.",
+                        "id": "MHZ14A_PIN_RX",
+                        "name": "MHZ14A_PIN_RX",
+                        "range": null,
+                        "title": "RX GPIO Number",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "MHZ14A_UART",
+                        "help": "UART baudrate.",
+                        "id": "MHZ14A_UART_BAUD_RATE",
+                        "name": "MHZ14A_UART_BAUD_RATE",
+                        "range": null,
+                        "title": "UART baudrate",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "MHZ14A_UART",
+                        "help": "UART port for PMS sensor.",
+                        "id": "MHZ14A_UART_PORT",
+                        "name": "MHZ14A_UART_PORT",
+                        "range": null,
+                        "title": "Uart Port",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": "MHZ14A_UART",
+                "id": "mhz14a-configuration-mhz14a-uart-configuration",
+                "title": "MHZ14a UART configuration",
+                "type": "menu"
+            }
+        ],
+        "depends_on": null,
+        "id": "mhz14a-configuration",
+        "title": "MHZ14a configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [],
+                "depends_on": null,
                 "help": "GPIO number for I2C Master clock line.",
                 "id": "PIN_NUM_SCL_GPIO",
                 "name": "PIN_NUM_SCL_GPIO",

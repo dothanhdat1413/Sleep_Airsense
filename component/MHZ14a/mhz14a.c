@@ -6,7 +6,7 @@ uint8_t mhz14a_commandTemplate[9] = {0xff, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0
 static uint32_t cap_val_begin_of_sample = 0;
 static uint32_t cap_val_end_of_sample = 0;
 
-static xQueueHandle cap_queue;
+static QueueHandle_t cap_queue;
 
 static bool mhz_isr_handler(mcpwm_unit_t mcpwm, mcpwm_capture_channel_id_t cap_sig, const cap_event_data_t *edata,
                                   void *arg) {
@@ -53,7 +53,7 @@ esp_err_t mhz14a_initPWM()
     while (esp_timer_get_time() - time_start_warm_up <TIME_TO_WARM_UP)
     {
         ESP_LOGI(__func__,"MHZ14A warming up...");
-        vTaskDelay(1000/portTICK_RATE_MS);
+        vTaskDelay(1000/ portTICK_PERIOD_MS);
     }
     
 
@@ -80,6 +80,16 @@ esp_err_t mhz14a_readDataViaPWM(uint32_t *co2_ppm)
 
 esp_err_t mhz14a_initUART(uart_config_t *uart_config)
 {
+     //Warming up
+    uint64_t time_start_warm_up = esp_timer_get_time();
+    while (esp_timer_get_time() - time_start_warm_up <TIME_TO_WARM_UP)
+    {
+        ESP_LOGI(__func__,"MHZ14A warming up...");
+        vTaskDelay(1000/ portTICK_PERIOD_MS);
+    }
+    
+
+    ESP_LOGI(__func__,"MHZ14A initialize success.");
     /** 
      * @note: 3rd parameter of uart_driver_install() function - rx_buffer_size never less than 128 byte.
      *        if rx_buffer_size <= 128, program print error code "uart rx buffer length error".
@@ -167,7 +177,7 @@ esp_err_t mhz14a_zeroPointCalibration(const bool statusFunction)
         ESP_LOGE(__func__, "Fail to send command for calibration zero point.");
         return ESP_ERROR_MHZ14A_CALIBRATION_ZERO_POINT;
     } else {
-        xTaskDelayUntil(&startClibrationTime, 7000 / portTICK_RATE_MS);
+        xTaskDelayUntil(&startClibrationTime, 7000 /  portTICK_PERIOD_MS);
         ESP_LOGI(__func__, "Calibration zero point successful.");
         return ESP_OK;
     }
@@ -185,7 +195,7 @@ esp_err_t mhz14a_spanPointCalibration()
         ESP_LOGE(__func__, "Fail to send command for calibration span point.");
         return ESP_ERROR_MHZ14A_CALIBRATION_ZERO_POINT;
     } else {
-        xTaskDelayUntil(&startClibrationTime, 7000 / portTICK_RATE_MS);
+        xTaskDelayUntil(&startClibrationTime, 7000 /  portTICK_PERIOD_MS);
         ESP_LOGI(__func__, "Calibration span point successful.");
         return ESP_OK;
     }
@@ -194,16 +204,16 @@ esp_err_t mhz14a_spanPointCalibration()
 esp_err_t mhz14a_getDataFromSensorViaUART(uint32_t *co2_ppm)
 {
     esp_err_t errorReturn = mhz14a_sendCommand(MHZ14A_UART_CMD_GET_CONCENTRATION, false);
-    uart_wait_tx_done(CONFIG_MHZ14A_UART_PORT, 500 / portTICK_RATE_MS);
+    uart_wait_tx_done(CONFIG_MHZ14A_UART_PORT, 500 /  portTICK_PERIOD_MS);
     if (errorReturn != ESP_ERROR_MHZ14A_UART_SEND_CMD_FAILED)
     {
         uint8_t rawDataSensor[128];
         int lenghtRawDataSensor = 0;
         ESP_ERROR_CHECK(uart_get_buffered_data_len(CONFIG_MHZ14A_UART_PORT, (size_t*)&lenghtRawDataSensor));
-        vTaskDelay(100/portTICK_RATE_MS);
-        lenghtRawDataSensor = uart_read_bytes(CONFIG_MHZ14A_UART_PORT, rawDataSensor, sizeof(rawDataSensor), 100 / portTICK_RATE_MS);
+        vTaskDelay(100/ portTICK_PERIOD_MS);
+        lenghtRawDataSensor = uart_read_bytes(CONFIG_MHZ14A_UART_PORT, rawDataSensor, sizeof(rawDataSensor), 100 /  portTICK_PERIOD_MS);
         
-        vTaskDelay(100/portTICK_RATE_MS);
+        vTaskDelay(100/ portTICK_PERIOD_MS);
         if (lenghtRawDataSensor != 9)
         {
             ESP_LOGE(__func__, "Get raw data from TX buffer failed.");
@@ -269,7 +279,7 @@ esp_err_t mhz14a_autoCalibartionViaHDPin()
     ESP_LOGI(__func__, "MHZ14a sensor is starting auto calibration...");
     ESP_ERROR_CHECK_WITHOUT_ABORT(gpio_set_level(CONFIG_HD_PIN, 0));
     ESP_LOGI(__func__, "Waitting about 7 seconds for auto calibration function...");
-    vTaskDelay((uint32_t)7000 / portTICK_RATE_MS);
+    vTaskDelay((uint32_t)7000 /  portTICK_PERIOD_MS);
     ESP_ERROR_CHECK_WITHOUT_ABORT(gpio_set_level(CONFIG_HD_PIN, 1));
     ESP_LOGI(__func__, "MHZ14a finished calibration!");
     gpio_reset_pin(CONFIG_HD_PIN);

@@ -1,0 +1,45 @@
+-- IDF_TARGET is not set, guessed 'esp32' from sdkconfig 'K:/ESP-IDF/PROJECT/Sleep_Airsense/sdkconfig'
+-- Found Git: K:/ESP-IDF/Espressif/tools/idf-git/2.39.2/cmd/git.exe (found version "2.39.2.windows.1") 
+-- ccache will be used for faster recompilation
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: K:/ESP-IDF/Espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: K:/ESP-IDF/Espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: K:/ESP-IDF/Espressif/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file K:/ESP-IDF/PROJECT/Sleep_Airsense/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Found Python3: K:/ESP-IDF/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe (found version "3.11.2") found components: Interpreter 
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- App "main" version: 59e7993-dirty
+-- Adding linker script K:/ESP-IDF/PROJECT/Sleep_Airsense/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: MHZ14a MH_Z19B app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash openthread partition_table perfmon protobuf-c protocomm pthread sdmmc sensor_2 soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MH_Z19B K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/app_trace K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/app_update K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bootloader K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bootloader_support K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bt K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/cmock K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/console K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/cxx K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/driver K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/efuse K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp-tls K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_adc K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_app_format K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_coex K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_common K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_eth K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_event K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_gdbstub K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hid K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_http_client K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_http_server K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_https_ota K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_https_server K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_hw_support K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_lcd K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_local_ctrl K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_mm K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_netif K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_netif_stack K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_partition K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_phy K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_pm K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_psram K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_ringbuf K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_rom K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_timer K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_wifi K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/espcoredump K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esptool_py K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/fatfs K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/hal K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/heap K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/http_parser K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/idf_test K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/ieee802154 K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/json K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/lwip K:/ESP-IDF/PROJECT/Sleep_Airsense/main K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mbedtls K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/mqtt K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/newlib K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/nvs_flash K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/openthread K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/perfmon K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/protobuf-c K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/protocomm K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/pthread K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/sdmmc K:/ESP-IDF/PROJECT/Sleep_Airsense/component/sensor_2 K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/soc K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/spiffs K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/tcp_transport K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/ulp K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/unity K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/usb K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/vfs K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/wear_levelling K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/wifi_provisioning K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/wpa_supplicant K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: K:/ESP-IDF/PROJECT/Sleep_Airsense/build
