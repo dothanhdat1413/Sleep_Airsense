@@ -1,0 +1,111 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM4 instead...[0m
+[0;33m--- idf_monitor on \\.\COM4 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081140: call_start_cpu1 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m0x40000000: _WindowOverflow4 in ROM
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:378
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:378
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40082000: heap_caps_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:378
+[0m
+[0;33m0x40084000: read_id_core at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:429 (discriminator 1)
+[0m
+[0;33m0x40082000: heap_caps_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/heap_caps.c:378
+[0m
+[0;33m0x40084000: read_id_core at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:429 (discriminator 1)
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40084000: read_id_core at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:429 (discriminator 1)
+[0m
+[0;33m0x40086000: xQueueSemaphoreTake at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:1791
+[0m
+[0;33m0x40084000: read_id_core at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/esp_flash_api.c:429 (discriminator 1)
+[0m
+[0;33m0x40086000: xQueueSemaphoreTake at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:1791
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40086000: xQueueSemaphoreTake at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:1791
+[0m
+[0;33m0x40088000: vPortCleanUpCoprocArea at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:619
+[0m
+[0;33m0x40086000: xQueueSemaphoreTake at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/queue.c:1791
+[0m
+[0;33m0x40088000: vPortCleanUpCoprocArea at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:619
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x40088000: vPortCleanUpCoprocArea at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:619
+[0m
+[0;33m0x4008a000: mapping_insert at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_remove at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:379
+ (inlined by) block_merge_next at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:486
+ (inlined by) tlsf_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1122
+[0m
+[0;33m0x40088000: vPortCleanUpCoprocArea at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:619
+[0m
+[0;33m0x4008a000: mapping_insert at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_remove at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:379
+ (inlined by) block_merge_next at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:486
+ (inlined by) tlsf_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1122
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x4008a000: mapping_insert at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_remove at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:379
+ (inlined by) block_merge_next at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:486
+ (inlined by) tlsf_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1122
+[0m
+[0;33m0x4008c000: spi_flash_chip_winbond_read at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/spi_flash_chip_winbond.c:64
+[0m
+[0;33m0x4008a000: mapping_insert at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:275
+ (inlined by) block_remove at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:379
+ (inlined by) block_merge_next at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:486
+ (inlined by) tlsf_free at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/heap/tlsf/tlsf.c:1122
+[0m
+[0;33m0x4008c000: spi_flash_chip_winbond_read at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/spi_flash_chip_winbond.c:64
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x4008c000: spi_flash_chip_winbond_read at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/spi_flash_chip_winbond.c:64
+[0m
+[0;33m0x4008c000: spi_flash_chip_winbond_read at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/spi_flash/spi_flash_chip_winbond.c:64
+[0m
+[0;33m0x40080000: _WindowOverflow4 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2023
+[0m
+[0;33m0x400d6cec: esp_ipc_init at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/esp_ipc.c:114
+[0m
+[0;33m0x400d0e30: esp_init_app_elf_sha256 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/esp_app_format/esp_app_desc.c:69
+[0m
+[0;33m0x400d3bc8: __esp_system_init_fn_esp_timer_startup_init at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/esp_timer/src/esp_timer.c:575
+[0m
+[0;33m0x400e5fec: __esp_system_init_fn_init_components0 at F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/startup.c:486
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

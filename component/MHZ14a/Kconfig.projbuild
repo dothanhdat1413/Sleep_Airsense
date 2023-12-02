@@ -57,7 +57,7 @@ menu "MHZ14a configuration"
         
         config MHZ14A_UART_PORT
             int "Uart Port"
-            default 0
+            default 2
             help 
                 UART port for PMS sensor.
         

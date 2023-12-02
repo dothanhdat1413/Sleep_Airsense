@@ -1,0 +1,4 @@
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Configuring incomplete, errors occurred!
+See also "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/CMakeFiles/CMakeOutput.log".

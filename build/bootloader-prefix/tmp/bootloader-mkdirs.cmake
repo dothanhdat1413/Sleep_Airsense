@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/bootloader/subproject"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/tmp"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src"
-  "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/frameworks/esp-idf-v5.1.1/components/bootloader/subproject"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/tmp"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src"
+  "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/CMakeFiles/bootloader
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/CMakeFiles/bootloader.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/CMakeFiles/bootloader-complete.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/CMakeFiles/bootloader
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/CMakeFiles/bootloader.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/CMakeFiles/bootloader-complete.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+F:/ESP-IDF/Installation/Espressif/Espressif/Sleep_Airsense/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
