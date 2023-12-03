@@ -4508,54 +4508,6 @@
     {
         "children": [
             {
-                "children": [],
-                "depends_on": null,
-                "help": "GPIO number for I2C Master clock line.",
-                "id": "PIN_NUM_SCL_GPIO",
-                "name": "PIN_NUM_SCL_GPIO",
-                "range": null,
-                "title": "SCL GPIO Number",
-                "type": "int"
-            },
-            {
-                "children": [],
-                "depends_on": null,
-                "help": "GPIO number for I2C Master data line.",
-                "id": "PIN_NUM_SDA_GPIO",
-                "name": "PIN_NUM_SDA_GPIO",
-                "range": null,
-                "title": "SDA GPIO Number",
-                "type": "int"
-            },
-            {
-                "children": [],
-                "depends_on": null,
-                "help": "I2C port for BME280 sensor.",
-                "id": "I2C_PORT",
-                "name": "I2C_PORT",
-                "range": null,
-                "title": "I2C Port",
-                "type": "int"
-            },
-            {
-                "children": [],
-                "depends_on": null,
-                "help": "I2C frequency.",
-                "id": "I2C_FREQ_HZ",
-                "name": "I2C_FREQ_HZ",
-                "range": null,
-                "title": "Frequency I2C",
-                "type": "int"
-            }
-        ],
-        "depends_on": null,
-        "id": "sample-configuration",
-        "title": "Sample configuration",
-        "type": "menu"
-    },
-    {
-        "children": [
-            {
                 "children": [
                     {
                         "children": [],

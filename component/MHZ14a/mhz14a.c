@@ -262,7 +262,7 @@ esp_err_t mhz14a_initUART(uart_config_t *uart_config)
         return ESP_OK;
     } else {
         ESP_LOGE(__func__, "MHZ14A UART port initialize failed. (0x%x 0x%x 0x%x)", error_1, error_2, error_3);
-        return ESP_ERROR_MHZ14A_INIT_UART_FAILED;
+        return ESP_ERROR_MHZ14A_INIT_FAILED;
     }
 }
 

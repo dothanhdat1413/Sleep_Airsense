@@ -1,0 +1,30 @@
+[1/12] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D K:\ESP-IDF\PROJECT\Sleep_Airsense\build\bootloader\esp-idf\esptool_py && K:\ESP-IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 K:/ESP-IDF/PROJECT/Sleep_Airsense/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/10] Building C object esp-idf/MHZ14a/CMakeFiles/__idf_MHZ14a.dir/mhz14a.c.obj
+K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a/mhz14a.c:43:18: warning: 'mhz14a_createCaptureQueue' defined but not used [-Wunused-function]
+   43 | static esp_err_t mhz14a_createCaptureQueue()
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+[3/10] Linking C static library esp-idf\MHZ14a\libMHZ14a.a
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:5:
+k:\esp-idf\project\sleep_airsense\component\mhz14a\mhz14a.h:104:42: warning: 'mhz14a_on_off_functionSelfCalibration' declared 'static' but never defined [-Wunused-function]
+  104 | __attribute__((unused)) static esp_err_t mhz14a_on_off_functionSelfCalibration(bool statusFunction);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+k:\esp-idf\project\sleep_airsense\component\mhz14a\mhz14a.h:42:22: warning: 'mhz14a_captureQueue' defined but not used [-Wunused-variable]
+   42 | static QueueHandle_t mhz14a_captureQueue = NULL;
+      |                      ^~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+warning: default on the choice symbol MHZ14A_PWM (defined at K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a/Kconfig.projbuild:27) will have no effect, as defaults do not affect choice symbols
+warning: default on the choice symbol MHZ14A_UART (defined at K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a/Kconfig.projbuild:30) will have no effect, as defaults do not affect choice symbols
+[7/10] Building C object CMakeFiles/Sleep_Airsense.elf.dir/project_elf_src_esp32.c.obj
+[8/10] Linking CXX executable Sleep_Airsense.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated K:/ESP-IDF/PROJECT/Sleep_Airsense/build/Sleep_Airsense.bin
+[10/10] cmd.exe /C "cd /D K:\ESP-IDF\PROJECT\Sleep_Airsense\build\esp-idf\esptool_py && K:\ESP-IDF\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app K:/ESP-IDF/PROJECT/Sleep_Airsense/build/partition_table/partition-table.bin K:/ESP-IDF/PROJECT/Sleep_Airsense/build/Sleep_Airsense.bin"
+Sleep_Airsense.bin binary size 0x30590 bytes. Smallest app partition is 0x100000 bytes. 0xcfa70 bytes (81%) free.

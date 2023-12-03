@@ -33,7 +33,9 @@ enum {
 
 #define ID_MHZ14A  0x0E
 #define ESP_ERROR_MHZ14A_INIT_FAILED                            ((ID_MHZ14A << 12)|(0x00))
-#define TIME_TO_WARM_UP 180000000                               // Time in microseconds (3 minutes)
+#define TIME_TO_WARM_UP 1800000                               // Time in microseconds (3 minutes) đang để 18s để test dễ
+
+#define MHZ14A_ERROR_INVALID_VALUE                              UINT32_MAX
 
 __attribute__((unused)) static SemaphoreHandle_t mhz14a_uartMuxtex = NULL;
 
@@ -57,7 +59,7 @@ static QueueHandle_t mhz14a_captureQueue = NULL;
 #define ESP_ERROR_MHZ14A_GET_RAW_DATA_FORM_UART_FAILED          ((ID_MHZ14A << 12)|(0x05))
 
 // UART data from datasheet, no need to change
-#define MHZ14A_TIME_FOR_CALIBRATION                         ((uint32_t)7000 / portTICK_RATE_MS)   // Time in milliseconds for calibration
+#define MHZ14A_TIME_FOR_CALIBRATION                         ((uint32_t)7000 / portTICK_PERIOD_MS)   // Time in milliseconds for calibration
 #define MHZ14A_UART_CMD_GET_CONCENTRATION                   0x86   // Command to get gas concentration
 #define MHZ14A_UART_CMD_CALIBRATION_ZERO_POINT              0x87   // Command for zero point calibration
 #define MHZ14A_UART_CMD_CALIBRATION_SPAN_POINT              0x88   // Command for span point calibration
@@ -151,7 +153,6 @@ esp_err_t mhz14a_setRangeSetting(const uint16_t co2_Range);
 #define ESP_ERROR_MHZ14A_READ_DATA_FAILED                       ((ID_MHZ14A << 12)|(0X06))
 #define ESP_ERROR_MHZ14A_CONFIG_GPIO_FAILED                     ((ID_MHZ14A << 12)|(0x07))
 #define ESP_ERROR_MHZ14A_INIT_INTR_FAILED                       ((ID_MHZ14A << 12)|(0x08))
-#define MHZ14A_ERROR_INVALID_VALUE                              UINT32_MAX
 
 
 /**
