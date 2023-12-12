@@ -42,7 +42,7 @@ __attribute__((unused)) static SemaphoreHandle_t mhz14a_uartMuxtex = NULL;
 static QueueHandle_t mhz14a_captureQueue = NULL;
 
 //Define for UART protocol
-#if CONFIG_MHZ14A_UART
+// #if CONFIG_MHZ14A_UART
 #define MHZ14A_UART_CONFIG_DEFAULT()   {.baud_rate = CONFIG_MHZ14A_UART_BAUD_RATE,  \
                                         .data_bits = UART_DATA_8_BITS,              \
                                         .stop_bits = UART_STOP_BITS_1,              \
@@ -134,7 +134,7 @@ esp_err_t mhz14a_getDataFromSensorViaUART(uint32_t *co2_ppm);
  */
 esp_err_t mhz14a_setRangeSetting(const uint16_t co2_Range);
 
-#endif  // CONFIG_MHZ14A_UART
+// #endif  // CONFIG_MHZ14A_UART
 
 /**************************************************************************************************/
 

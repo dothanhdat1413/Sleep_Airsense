@@ -13,16 +13,17 @@ uart_config_t uartMHZ14a ={
     .rx_flow_ctrl_thresh = 0, 
     .source_clk = UART_SCLK_DEFAULT
 };
-
+// 
 uint32_t co2_ppm=0; 
 
 void app_main(void)
 {
-    mhz14a_initUART(&uartMHZ14a);
+    ESP_LOGI("MHZ14A","hhhh");
+    ESP_ERROR_CHECK_WITHOUT_ABORT(mhz14a_initUART(&uartMHZ14a));
+    ESP_LOGI("MHZ14A","hhhh");
     while(1){
-        mhz14a_getDataFromSensorViaUART(&co2_ppm);
-        ESP_LOGI("MHZ14A", "CO2: %ld", co2_ppm);
-        printf("hhhh");
+        ESP_ERROR_CHECK_WITHOUT_ABORT(mhz14a_getDataFromSensorViaUART(&co2_ppm));
+        ESP_LOGI("MHZ14A", "CO2: %lu", co2_ppm);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }   

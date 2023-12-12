@@ -1,4 +1,0 @@
-warning: default on the choice symbol MHZ14A_PWM (defined at K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a/Kconfig.projbuild:27) will have no effect, as defaults do not affect choice symbols
-warning: default on the choice symbol MHZ14A_UART (defined at K:/ESP-IDF/PROJECT/Sleep_Airsense/component/MHZ14a/Kconfig.projbuild:30) will have no effect, as defaults do not affect choice symbols
-Compiler supported targets: xtensa-esp32-elf
-

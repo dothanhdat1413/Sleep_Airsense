@@ -21,14 +21,17 @@ static uint8_t mhz14a_commandTemplate[9] = {
  */
 static void mhz14a_warmUp()
 {
-    uint64_t time_start_warm_up = esp_timer_get_time();
-    // Wait until the warm up time has elapsed
-    while (esp_timer_get_time() - time_start_warm_up < TIME_TO_WARM_UP)
-    {
-        // Log a message indicating that the sensor is warming up
-        ESP_LOGI(__func__, "MHZ14A warming up...");
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
+    // uint64_t time_start_warm_up = esp_timer_get_time();
+    // uint64_t time_end_warm_up = time_start_warm_up + TIME_TO_WARM_UP;
+    // // Wait until the warm up time has elapsed
+    // while (esp_timer_get_time() - time_start_warm_up < TIME_TO_WARM_UP)
+    // {
+    //     // Log a message indicating that the sensor is warming up
+    //     ESP_LOGI(__func__, "MHZ14A warming up...");
+    //     vTaskDelay(1000 / portTICK_PERIOD_MS);
+    // }
+
+    vTaskDelay(5 / portTICK_PERIOD_MS);
 }
 
 /**
@@ -58,49 +61,6 @@ static esp_err_t mhz14a_createCaptureQueue()
 /**************************************************************************************************/
 
 #ifdef CONFIG_MHZ14A_PWM
-#if ESP_IDF_VER <= ESP_IDF_VERSION_VAL(4, 4, 4)
-
-static bool IRAM_ATTR mhz_isr_handler(mcpwm_unit_t mcpwm, mcpwm_capture_channel_id_t cap_sig, const cap_event_data_t *edata,
-                                  void *arg) {
-    //calculate the interval in the ISR,
-    //so that the interval will be always correct even when mhz14a_captureQueue is not handled in time and overflow.
-    BaseType_t high_task_wakeup = pdFALSE;
-    if (edata->cap_edge == MCPWM_POS_EDGE) {
-        // store the timestamp when pos edge is detected
-        cap_val_begin_of_sample = edata->cap_value;
-        cap_val_end_of_sample = cap_val_begin_of_sample;
-    } else {
-        cap_val_end_of_sample = edata->cap_value;
-        uint32_t pulse_count = cap_val_end_of_sample - cap_val_begin_of_sample;
-        // send measurement back though queue
-        xQueueSendFromISR(mhz14a_captureQueue, &pulse_count, &high_task_wakeup);
-    }
-    return high_task_wakeup == pdTRUE;
-}
-
-esp_err_t mhz14a_initPWM()
-{
-    if (mhz14a_createCaptureQueue() == ESP_FAIL)
-    {
-        return ESP_ERROR_MHZ14A_INIT_FAILED;
-    }
-    // set CAP_0 on GPIO
-    ESP_ERROR_CHECK_WITHOUT_ABORT(mcpwm_gpio_init(MCPWM_UNIT_0, MCPWM_CAP_0, CONFIG_MHZ14A_PWM_PIN));
-
-    // enable both edge capture on CAP0
-    mcpwm_capture_config_t conf = {
-        .cap_edge = MCPWM_BOTH_EDGE,
-        .cap_prescale = 1,
-        .capture_cb = mhz_isr_handler,
-        .user_data = NULL
-    };
-    ESP_ERROR_CHECK_WITHOUT_ABORT(mcpwm_capture_enable_channel(MCPWM_UNIT_0, MCPWM_SELECT_CAP0, &conf));
-
-    ESP_LOGI(__func__,"MHZ14A initialize success.");
-    return ESP_OK;
-}
-
-#elif ESP_IDF_VER >= ESP_IDF_VERSION_VAL(5, 0, 0)
 
 /**
  * @brief Callback function for MHZ14A sensor capture event
@@ -142,6 +102,7 @@ static bool mhz14a_callback(mcpwm_cap_channel_handle_t cap_chan, const mcpwm_cap
  */
 esp_err_t mhz14a_initPWM()
 {
+    mhz14a_warmUp();
     if (mhz14a_createCaptureQueue() == ESP_FAIL)
     {
         return ESP_ERROR_MHZ14A_INIT_FAILED;
@@ -194,7 +155,6 @@ esp_err_t mhz14a_initPWM()
     ESP_LOGI(__func__,"MHZ14A initialize success.");
     return ESP_OK;
 }
-#endif  // ESP_IDF_VER
 
 esp_err_t mhz14a_readDataViaPWM(uint32_t *co2_ppm)
 {
@@ -220,7 +180,8 @@ esp_err_t mhz14a_readDataViaPWM(uint32_t *co2_ppm)
     return ESP_OK;
 }
 
-#elif CONFIG_MHZ14A_UART
+#endif
+// #elif CONFIG_MHZ14A_UART
 
 esp_err_t mhz14a_initUART(uart_config_t *uart_config)
 {
@@ -439,8 +400,17 @@ esp_err_t mhz14a_getDataFromSensorViaUART(uint32_t *co2_ppm)
             rawDataSensor[8] == mhz14a_getCheckSum(rawDataSensor))
         {
             // Calculate CO2 concentration
-            *co2_ppm = ((*co2_ppm | rawDataSensor[2]) << 8) | rawDataSensor[3];     // Or *co2_ppm = rawDataSensor[2] * 256 + rawDataSensor[3];
+            *co2_ppm = (uint32_t)(((rawDataSensor[2]) << 8) | rawDataSensor[3]);     // Or *co2_ppm = rawDataSensor[2] * 256 + rawDataSensor[3];
 
+            ESP_LOGE(__func__, "Raw data from TX buffer: [%u %u %u %u %u %u %u %u %u]", rawDataSensor[0],
+                                                                                        rawDataSensor[1],
+                                                                                        rawDataSensor[2],
+                                                                                        rawDataSensor[3],
+                                                                                        rawDataSensor[4],
+                                                                                        rawDataSensor[5],
+                                                                                        rawDataSensor[6],
+                                                                                        rawDataSensor[7],
+                                                                                        rawDataSensor[8]);
             // Return success
             return ESP_OK;
         }
@@ -502,7 +472,7 @@ esp_err_t mhz14a_setRangeSetting(const uint16_t co2_Range)
     }
 };
 
-#endif  // CONFIG_MHZ14A_UART
+//#endif  // CONFIG_MHZ14A_UART
 
 /**************************************************************************************************/
 
