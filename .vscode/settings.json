@@ -12,5 +12,6 @@
     "idf.espIdfPathWin": "C:/Users/Admin/esp/esp-idf/",
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
-    ]
+    ],
+    "C_Cpp.dimInactiveRegions": false
 }

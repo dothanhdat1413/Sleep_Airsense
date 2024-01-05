@@ -1,0 +1,72 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- idf_monitor on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081564: call_start_cpu1 at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x400d7ace: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:226 (discriminator 1)
+[0m
+[0;33m0x400e52b7: task_wdt_timeout_handling at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400e543e: task_wdt_isr at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082f31: _xt_lowint1 at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d6e9d: uart_tx_char at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/vfs/vfs_uart.c:162
+[0m
+[0;33m0x400d7683: uart_write at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/vfs/vfs_uart.c:217
+[0m
+[0;33m0x400d652b: console_write at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/vfs/vfs_console.c:73
+[0m
+[0;33m0x400d60f2: esp_vfs_write at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/vfs/vfs.c:445 (discriminator 4)
+[0m
+[0;33m0x4000bd83: _write_r in ROM
+[0m
+[0;33m0x4000117d: __swrite in ROM
+[0m
+[0;33m0x400592fe: __sflush_r in ROM
+[0m
+[0;33m0x4005937a: _fflush_r in ROM
+[0m
+[0;33m0x4014a12f: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x40158813: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x40152292: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1777 (discriminator 1)
+[0m
+[0;33m0x401523fd: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vprintf.c:34 (discriminator 5)
+[0m
+[0;33m0x40160985: esp_log_writev at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log/log.c:200
+[0m
+[0;33m0x40090e91: esp_log_write at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/log/log.c:210
+[0m
+[0;33m0x400d7c50: sdcard_writeDataToFile at K:/ESP-IDF/PROJECT/Sleep_Airsense/component/FileManager/sdcard.c:56
+[0m
+[0;33m0x400d7af5: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 3)
+[0m
+[0;33m0x4016004f: main_task at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008d40d: vPortTaskWrapper at K:/ESP-IDF/Espressif/frameworks/esp-idf-v5.1.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400d7b06: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 1)
+[0m
+[0;33m0x400d7ace: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:226 (discriminator 1)
+[0m
+[0;33m0x400d7b06: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 1)
+[0m
+[0;33m0x400d7ace: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:226 (discriminator 1)
+[0m
+[0;33m0x400d7b06: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 1)
+[0m
+[0;33m0x400d7ace: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:226 (discriminator 1)
+[0m
+[0;33m0x400d7b06: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 1)
+[0m
+[0;33m0x400d7ace: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:226 (discriminator 1)
+[0m
+[0;33m0x400d7b06: app_main at K:/ESP-IDF/PROJECT/Sleep_Airsense/main/main.c:229 (discriminator 1)
+[0m
+[0m

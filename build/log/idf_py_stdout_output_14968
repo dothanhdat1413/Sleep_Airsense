@@ -1,0 +1,447 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15584
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (30) boot: ESP-IDF v5.1.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jan  6 2024 00:04:01[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25bdch (154588) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00035c04 vaddr=3ffb0000 size=038f0h ( 14576) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=000394fc vaddr=40080000 size=06b1ch ( 27420) load[0m
+[0;32mI (177) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=92d84h (601476) map[0m
+[0;32mI (395) esp_image: segment 4: paddr=000d2dac vaddr=40086b1c size=1146ch ( 70764) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (437) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (448) cpu_start: Pro cpu up.[0m
+[0;32mI (449) cpu_start: Starting app cpu, entry point is 0x40081564[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (466) cpu_start: Pro cpu start user code[0m
+[0;32mI (466) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (466) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     Sleep_Airsense[0m
+[0;32mI (477) cpu_start: App version:      4907eb5-dirty[0m
+[0;32mI (482) cpu_start: Compile time:     Jan  6 2024 00:15:08[0m
+[0;32mI (488) cpu_start: ELF file SHA256:  df5aa1d094dd6a70...[0m
+[0;32mI (494) cpu_start: ESP-IDF:          v5.1.1-dirty[0m
+[0;32mI (500) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (504) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (509) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (521) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFB8008 len 00027FF8 (159 KiB): DRAM[0m
+[0;32mI (533) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (546) heap_init: At 40097F88 len 00008078 (32 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;32mI (562) app_start: Starting scheduler on CPU0[0m
+[0;32mI (566) app_start: Starting scheduler on CPU1[0m
+[0;32mI (566) main_task: Started on CPU0[0m
+[0;32mI (576) main_task: Calling app_main()[0m
+[0;32mI (606) wifi station: ESP_WIFI_MODE_STA[0m
+I (626) wifi:wifi driver task: 3ffc0000, prio:23, stack:6656, core=0
+I (636) wifi:wifi firmware version: ce9244d
+I (646) wifi:wifi certification version: v7.0
+I (646) wifi:config NVS flash: enabled
+I (646) wifi:config nano formating: disabled
+I (646) wifi:Init data frame dynamic rx buffer num: 32
+I (646) wifi:Init management frame dynamic rx buffer num: 32
+I (656) wifi:Init management short buffer num: 32
+I (656) wifi:Init dynamic tx buffer num: 32
+I (666) wifi:Init static rx buffer size: 1600
+I (666) wifi:Init static rx buffer num: 10
+I (676) wifi:Init dynamic rx buffer num: 32
+[0;32mI (676) wifi_init: rx ba win: 6[0m
+[0;32mI (676) wifi_init: tcpip mbox: 32[0m
+[0;32mI (686) wifi_init: udp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp mbox: 6[0m
+[0;32mI (686) wifi_init: tcp tx win: 5744[0m
+[0;32mI (696) wifi_init: tcp rx win: 5744[0m
+[0;32mI (696) wifi_init: tcp mss: 1440[0m
+[0;32mI (706) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (706) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (716) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (816) wifi:mode : sta (94:3c:c6:34:14:18)
+I (826) wifi:enable tsf
+[0;32mI (826) wifi station: wifi_init_sta finished.[0m
+I (836) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1
+I (836) wifi:state: init -> auth (b0)
+I (846) wifi:state: auth -> assoc (0)
+I (856) wifi:state: assoc -> run (10)
+W (856) wifi:[ADDBA]rx delba, code:39, delete tid:0
+W (856) wifi:[ADDBA]rx delba, code:39, delete tid:0
+I (1056) wifi:connected with VunhungPlus2, aid = 2, channel 1, BW20, bssid = 64:64:4a:ff:21:20
+I (1056) wifi:security: WPA2-PSK, phy: bgn, rssi: -61
+I (1066) wifi:pm start, type: 1
+
+I (1156) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2066) esp_netif_handlers: sta ip: 192.168.1.15, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2066) wifi station: got ip:192.168.1.15[0m
+[0;32mI (2066) wifi station: connected to ap SSID:VunhungPlus2 password:Ntcd25142k14[0m
+[0;32mI (2076) sntp_init_func: Initializing SNTP.[0m
+[0;32mI (2076) MHZ14A: init MHZ14A[0m
+[0;32mI (2086) mhz14a_initUART: MHZ14A initialize success.[0m
+[0;32mI (2086) mhz14a_initUART: MHZ14A UART port initialize successful.[0m
+[0;32mI (2096) app_main: Initialize SD card with SPI interface.[0m
+[0;32mI (2106) sdcard_initialize: Initializing SD card[0m
+[0;32mI (2106) sdcard_initialize: Using SPI peripheral[0m
+[0;32mI (2116) sdcard_initialize: Mounting filesystem[0m
+[0;32mI (2116) gpio: GPIO[5]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2126) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (2176) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (2196) sdcard_initialize: SDCard has been initialized.[0m
+[0;32mI (2196) sdcard_initialize: Filesystem mounted[0m
+[0;32mI (2196) sdcard_initialize: SDCard properties.[0m
+Name: USD  
+Type: SDHC/SDXC
+Speed: 5.00 MHz (limit: 5.00 MHz)
+Size: 7655MB
+CSD: ver=2, sector_size=512, capacity=15677440 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (2216) MHZ14A: Start take time[0m
+[0;32mI (2216) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (2726) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (3226) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (3726) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (4226) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (4726) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (5226) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (5726) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (6226) sntp_setTime: Waiting for system time to be set...[0m
+I (6666) wifi:<ba-add>idx:0 (ifx:0, 64:64:4a:ff:21:20), tid:0, ssn:4, winSize:64
+[0;32mI (6726) MHZ14A: Take time done[0m
+[0;32mI (6726) Test: timeString[0]:S
+[0m
+[0;32mI (6726) Test: timeString[1]:a
+[0m
+[0;32mI (6726) Test: timeString[2]:t
+[0m
+[0;32mI (6726) Test: timeString[3]: 
+[0m
+[0;32mI (6736) Test: timeString[4]:J
+[0m
+[0;32mI (6736) Test: timeString[5]:a
+[0m
+[0;32mI (6736) Test: timeString[6]:n
+[0m
+[0;32mI (6746) Test: timeString[7]: 
+[0m
+[0;32mI (6746) Test: timeString[8]: 
+[0m
+[0;32mI (6746) Test: timeString[9]:6
+[0m
+[0;32mI (6756) Test: timeString[10]: 
+[0m
+[0;32mI (6756) Test: timeString[11]:0
+[0m
+[0;32mI (6766) Test: timeString[12]:0
+[0m
+[0;32mI (6766) Test: timeString[13]::
+[0m
+[0;32mI (6766) Test: timeString[14]:3
+[0m
+[0;32mI (6776) Test: timeString[15]:5
+[0m
+[0;32mI (6776) Test: timeString[16]::
+[0m
+[0;32mI (6786) Test: timeString[17]:3
+[0m
+[0;32mI (6786) Test: timeString[18]:2
+[0m
+[0;32mI (6786) Test: timeString[19]: 
+[0m
+[0;32mI (6796) Test: timeString[20]:2
+[0m
+[0;32mI (6796) Test: timeString[21]:0
+[0m
+[0;32mI (6806) Test: timeString[22]:2
+[0m
+[0;32mI (6806) Test: timeString[23]:4
+[0m
+[0;32mI (6806) Test: timeString[24]: 
+[0m
+[0;32mI (6816) Test: timeString[25]: 
+[0m
+[0;32mI (6816) Test: timeString[26]: 
+[0m
+[0;32mI (6826) Test: timeString[27]: 
+[0m
+[0;32mI (6826) Test: timeString[28]: 
+[0m
+[0;32mI (6826) Test: timeString[29]: 
+[0m
+[0;32mI (6836) Test: timeString[30]: 
+[0m
+[0;32mI (6836) Test: timeString[31]: 
+[0m
+[0;32mI (6846) Test: timeString[32]: 
+[0m
+[0;32mI (6846) Test: timeString[33]: 
+[0m
+[0;32mI (6846) Test: timeString[34]: 
+[0m
+[0;32mI (6856) Test: timeString[35]: 
+[0m
+[0;32mI (6856) Test: timeString[36]: 
+[0m
+[0;32mI (6866) Test: timeString[37]: 
+[0m
+[0;32mI (6866) Test: timeString[38]: 
+[0m
+[0;32mI (6866) Test: timeString[39]: 
+[0m
+[0;32mI (6876) Test: timeString[40]: 
+[0m
+[0;32mI (6876) Test: timeString[41]: 
+[0m
+[0;32mI (6886) Test: timeString[42]: 
+[0m
+[0;32mI (6886) Test: timeString[43]: 
+[0m
+[0;32mI (6886) Test: timeString[44]: 
+[0m
+[0;32mI (6896) Test: timeString[45]: 
+[0m
+[0;32mI (6896) Test: timeString[46]: 
+[0m
+[0;32mI (6906) Test: timeString[47]: 
+[0m
+[0;32mI (6906) Test: timeString[48]: 
+[0m
+[0;32mI (6906) Test: timeString[49]: 
+[0m
+[0;32mI (6916) Test: timeString[50]: 
+[0m
+[0;32mI (6916) Test: timeString[51]: 
+[0m
+[0;32mI (6926) Test: timeString[52]: 
+[0m
+[0;32mI (6926) Test: timeString[53]: 
+[0m
+[0;32mI (6926) Test: timeString[54]: 
+[0m
+[0;32mI (6936) Test: timeString[55]: 
+[0m
+[0;32mI (6936) Test: timeString[56]: 
+[0m
+[0;32mI (6946) Test: timeString[57]: 
+[0m
+[0;32mI (6946) Test: timeString[58]: 
+[0m
+[0;32mI (6946) Test: timeString[59]: 
+[0m
+[0;32mI (6956) Test: timeString[60]: 
+[0m
+[0;32mI (6956) Test: timeString[61]: 
+[0m
+[0;32mI (6966) Test: timeString[62]: 
+[0m
+[0;32mI (6966) Test: timeString[63]: 
+[0m
+[0;32mI (8966) MHZ14A: Start take time[0m
+[0;32mI (8966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (9466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (9966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (10466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (10966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (11466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (11966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (12466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (12966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (13466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (13966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (14466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (14966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (15466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (15966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (16466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (16966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (17466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (17966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (18466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (18966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (19466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (19966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (20466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (20966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (21466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (21966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (22466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (22966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (23466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (23966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (24466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (24966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (25466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (25966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (26466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (26966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (27466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (27966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (28466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (28966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (29466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (29966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (30466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (30966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (31466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (31966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (32466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (32966) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (33466) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (33966) MHZ14A: Take time done[0m
+[0;32mI (33966) Test: timeString[0]:S
+[0m
+[0;32mI (33966) Test: timeString[1]:a
+[0m
+[0;32mI (33966) Test: timeString[2]:t
+[0m
+[0;32mI (33966) Test: timeString[3]: 
+[0m
+[0;32mI (33976) Test: timeString[4]:J
+[0m
+[0;32mI (33976) Test: timeString[5]:a
+[0m
+[0;32mI (33976) Test: timeString[6]:n
+[0m
+[0;32mI (33986) Test: timeString[7]: 
+[0m
+[0;32mI (33986) Test: timeString[8]: 
+[0m
+[0;32mI (33996) Test: timeString[9]:6
+[0m
+[0;32mI (33996) Test: timeString[10]: 
+[0m
+[0;32mI (33996) Test: timeString[11]:0
+[0m
+[0;32mI (34006) Test: timeString[12]:0
+[0m
+[0;32mI (34006) Test: timeString[13]::
+[0m
+[0;32mI (34016) Test: timeString[14]:3
+[0m
+[0;32mI (34016) Test: timeString[15]:6
+[0m
+[0;32mI (34016) Test: timeString[16]::
+[0m
+[0;32mI (34026) Test: timeString[17]:0
+[0m
+[0;32mI (34026) Test: timeString[18]:0
+[0m
+[0;32mI (34036) Test: timeString[19]: 
+[0m
+[0;32mI (34036) Test: timeString[20]:2
+[0m
+[0;32mI (34036) Test: timeString[21]:0
+[0m
+[0;32mI (34046) Test: timeString[22]:2
+[0m
+[0;32mI (34046) Test: timeString[23]:4
+[0m
+[0;32mI (34056) Test: timeString[24]: 
+[0m
+[0;32mI (34056) Test: timeString[25]: 
+[0m
+[0;32mI (34056) Test: timeString[26]: 
+[0m
+[0;32mI (34066) Test: timeString[27]: 
+[0m
+[0;32mI (34066) Test: timeString[28]: 
+[0m
+[0;32mI (34076) Test: timeString[29]: 
+[0m
+[0;32mI (34076) Test: timeString[30]: 
+[0m
+[0;32mI (34076) Test: timeString[31]: 
+[0m
+[0;32mI (34086) Test: timeString[32]: 
+[0m
+[0;32mI (34086) Test: timeString[33]: 
+[0m
+[0;32mI (34096) Test: timeString[34]: 
+[0m
+[0;32mI (34096) Test: timeString[35]: 
+[0m
+[0;32mI (34106) Test: timeString[36]: 
+[0m
+[0;32mI (34106) Test: timeString[37]: 
+[0m
+[0;32mI (34106) Test: timeString[38]: 
+[0m
+[0;32mI (34116) Test: timeString[39]: 
+[0m
+[0;32mI (34116) Test: timeString[40]: 
+[0m
+[0;32mI (34126) Test: timeString[41]: 
+[0m
+[0;32mI (34126) Test: timeString[42]: 
+[0m
+[0;32mI (34126) Test: timeString[43]: 
+[0m
+[0;32mI (34136) Test: timeString[44]: 
+[0m
+[0;32mI (34136) Test: timeString[45]: 
+[0m
+[0;32mI (34146) Test: timeString[46]: 
+[0m
+[0;32mI (34146) Test: timeString[47]: 
+[0m
+[0;32mI (34146) Test: timeString[48]: 
+[0m
+[0;32mI (34156) Test: timeString[49]: 
+[0m
+[0;32mI (34156) Test: timeString[50]: 
+[0m
+[0;32mI (34166) Test: timeString[51]: 
+[0m
+[0;32mI (34166) Test: timeString[52]: 
+[0m
+[0;32mI (34166) Test: timeString[53]: 
+[0m
+[0;32mI (34176) Test: timeString[54]: 
+[0m
+[0;32mI (34176) Test: timeString[55]: 
+[0m
+[0;32mI (34186) Test: timeString[56]: 
+[0m
+[0;32mI (34186) Test: timeString[57]: 
+[0m
+[0;32mI (34186) Test: timeString[58]: 
+[0m
+[0;32mI (34196) Test: timeString[59]: 
+[0m
+[0;32mI (34196) Test: timeString[60]: 
+[0m
+[0;32mI (34206) Test: timeString[61]: 
+[0m
+[0;32mI (34206) Test: timeString[62]: 
+[0m
+[0;32mI (34216) Test: timeString[63]: 
+[0m
+[0;32mI (36216) MHZ14A: Start take time[0m
+[0;32mI (36216) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (36716) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (37216) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (37716) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (38216) sntp_setTime: Waiting for system time to be set...[0m
+[0;32mI (38716) sntp_setTime: Waiting for system time to be set...[0m
